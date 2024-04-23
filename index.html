@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #3EECAC;
+background-image: linear-gradient(19deg, #3EECAC 0%, #EE74E1 100%);
+
+        }
+        .app-title{
+           text-align: center;
+        }
+        .lamp-container{
+            background-color: white;
+            width: 400px;
+            margin: 10px auto;
+            display: flex;
+            justify-content: center;
+            padding: 30px;
+            border-radius: 10px;
+            }
+        .lamp-img{
+            height:300px ;
+        }
+        .btn-container{
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+          }
+        .btn-on{
+            background-color: green;
+        }
+        .btn-off{
+            background-color: red;
+        }
+        .btn-toggler{
+            font-size: 20px;
+            padding: 5px 10px;
+            border-radius: 20px;
+            border: none;
+            margin: 0 20px;
+            cursor: pointer;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="app-title">Lamp Toggler</h1>
+    <div class="lamp-container">
+    <img src= "./lamp-off.png" class="lamp-img" id="lamp">
+    </div>
+    <div class="btn-container">
+        <button class="btn-toggler btn-on" onclick="turnOn()">
+        Lamp On
+    </button>
+        <button class="btn-toggler btn-off" onclick="turnOff()">
+        Lamp Off
+    </button>
+    </div>
+    <script>
+    function turnOn()
+       {
+        const lampElement = document.getElementById('lamp'); 
+        lampElemenrt.src = './lamp-on.png';
+        }
+    function turnOff()
+        {
+          const lampElement = document.getElementById('lamp');
+          lampElemenet.src = './lamp-off.png'; 
+        }
+    </script>
+</body>
+</html>
